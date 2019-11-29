@@ -1,0 +1,39 @@
+{
+  "name": "catalina-browser-plugin",
+  "version": "1.1.0",
+  "description": "卡特琳娜答题插件端，答案自动填充释放双手~",
+  "main": "index.js",
+  "scripts": {
+    "server": "webpack-dev-server",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
+  },
+  "keywords": [],
+  "author": "卡特琳娜",
+  "license": "GPL3.0",
+  "bugs": {
+    "url": "https://gitee.com/starxg/catalina-browser-plugin/issues"
+  },
+  "homepage": "https://gitee.com/starxg/catalina-browser-plugin#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/plugin-transform-runtime": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.0.5",
+    "eslint": "^6.7.1",
+    "eslint-loader": "^3.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.7.0",
+    "@babel/runtime": "^7.7.4",
+    "spark-md5": "^3.0.0"
+  }
+}

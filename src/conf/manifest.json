@@ -1,0 +1,38 @@
+{
+    "manifest_version": 2,
+    "name": "卡特琳娜",
+    "version": "1.1.0",
+    "description": "这是一个支持自动同步和手动同步Chrome书签的插件。",
+    "icons": {
+        "16": "./images/icon.png",
+        "48": "./images/icon.png",
+        "128": "./images/icon.png"
+    },
+    "browser_action": {
+        "name": "Click to change the icon's color"
+    },
+    "background": {
+        "page": "./pages/background.html"
+    },
+    "homepage_url": "https://gitee.com/starxg/catalina-browser-plugin#readme",
+    "permissions": [
+        "bookmarks",
+        "storage",
+        "webRequest",
+        "webRequestBlocking",
+        "http://gitee.com/",
+        "https://gitee.com/",
+        "http://github.com/",
+        "https://github.com/"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "js/index.js"
+            ]
+        }
+    ]
+}
