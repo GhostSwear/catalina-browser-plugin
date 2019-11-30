@@ -31,7 +31,7 @@
     > 如果答案未自动选中请看下面：开发者模式
 3. 开发者模式
     > 打开试卷时候我们推荐你打开“开发者模式”（按键盘F12）然后点击“Console”即可看到对应日志。
-4. 此插件仅支持ACCP课程，其它课程请使用请向我们[反馈](https://github.com/YQHP-Happi/catalina-browser-plugin/issues/new)
+4. 此插件仅支持ACCP课程，如其它课程也要使用请向我们 [反馈](https://github.com/YQHP-Happi/catalina-browser-plugin/issues/new)
 
 ## 源码解析
 
