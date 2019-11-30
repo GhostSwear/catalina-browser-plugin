@@ -71,7 +71,6 @@
         |   └── process.js
         └── pages
             └── background.html
-
 ```
 
 
