@@ -70,6 +70,11 @@
             └── background.html （常驻后台页面和background.js）
 ```
 
-## 联系我们
+## 关于我们
+
+#### 联系
 QQ群：[532077356](https://qm.qq.com/cgi-bin/qm/qr?k=kpuO3MBZH5QB-nEA0RRe8y7OQTWNqsgi&authKey=YU0ymghKS0ZziCJJsq5omi3uj%2FgyV2o3hirsBkTRVwG3d0ay%2Fp9wqdqIAHJMCHAo)  
 微信公众号：catalina  
+
+#### 意见/建议
+如在使用中遇到问题，[点我反馈](https://github.com/YQHP-Happi/catalina-browser-plugin/issues)
