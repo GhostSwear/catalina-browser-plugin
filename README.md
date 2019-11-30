@@ -22,7 +22,7 @@
     > * 然后点击上面的 “加载解压缩的扩展”  
     > * 选择刚刚解压的插件即可
 
-#### 使用 (仅支持ACCP)
+#### 使用
 1. 打开官方题库页面
     > [题库1](https://dwz.cn/xFyS0BnI) [题库2](https://dwz.cn/lth8zBgx) [题库3](https://dwz.cn/iWszcdfI) 这三个题库地址没有区别不用刻意区分，进入任意一个即可。
 2. 答题
@@ -31,6 +31,7 @@
     > 如果答案未自动选中请看下面：开发者模式
 3. 开发者模式
     > 打开试卷时候我们推荐你打开“开发者模式”（按键盘F12）然后点击“Console”即可看到对应日志。
+4. 此插件仅支持ACCP课程，其它课程请使用请向我们[反馈](https://github.com/YQHP-Happi/catalina-browser-plugin/issues/new)
 
 ## 源码解析
 
