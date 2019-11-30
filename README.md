@@ -72,4 +72,4 @@
 
 # 联系我们
 微信公众号
-![Image text](https://www.baidu.com/img/bd_logo1.png?where=super)
+<img src="https://www.baidu.com/img/bd_logo1.png"/>
