@@ -1,7 +1,7 @@
 import { getConfig } from "./js/init";
 import process from "./js/process";
-const CURR_VERSION_CODE = 110;
-const CURR_VERSION = "1.1.0";
+const CURR_VERSION_CODE = 111;
+const CURR_VERSION = "1.1.1";
 
 //require("./js/process");
 
