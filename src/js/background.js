@@ -24,16 +24,16 @@ chrome.runtime.onConnect.addListener(function(port) {
                 r: Math.random()
             })
                 .then(d => {
-                    port.postMessage((config = {
+                    port.postMessage({
                         success: true,
                         data: d
-                    }));
+                    });
                 })
                 .catch(e => {
-                    port.postMessage((config = {
+                    port.postMessage({
                         success: false,
                         msg: e
-                    }));
+                    });
                 });
         });
     }
