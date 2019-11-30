@@ -1,6 +1,5 @@
 import img2md5 from "./img2md5";
 import Http from "./http";
-var config = null;
 
 /**
  * 监听content_scripts.js发来的消息，因为content_scripts的权限不能进行跨域
@@ -21,10 +20,6 @@ chrome.runtime.onConnect.addListener(function(port) {
     //对初始化配置进行监听
     if (port.name === "initConfig") {
         port.onMessage.addListener(function() {
-            if (config != null) {
-                port.postMessage(config);
-                return;
-            }
             Http.get("http://catalina.starxg.com/catalina-plugin-conf.json", {
                 r: Math.random()
             })
