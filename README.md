@@ -14,12 +14,12 @@
 2. 解压完成之后打开 Chromium内核浏览器
     > 推荐使用 [Chrome](https://www.google.cn/intl/zh-CN/chrome/) 、[新版Edge](https://www.microsoftedgeinsider.com/zh-cn/download/) 浏览器
 3. 打开浏览器之后（以新版Edge为例）
-    > 1. 点击右上角的三个点  
+    > * 点击右上角的三个点  
     > 
-    > 2. 点击 “扩展”  
-    > 3. 打开左下角的 “开发人员模式”    
-    > 4. 然后点击上面的 “加载解压缩的扩展”  
-    > 4. 选择刚刚解压的插件即可
+    > * 点击 “扩展”  
+    > * 打开左下角的 “开发人员模式”    
+    > * 然后点击上面的 “加载解压缩的扩展”  
+    > * 选择刚刚解压的插件即可
 
 ### 使用
 1. 打开官方题库页面
@@ -41,36 +41,35 @@
 * node
 * webpack
 
-当然不懂也可以，只要会javascript也可以看懂。
+不懂也可以，只要会javascript也可以看懂。
 
 ### 结构
 ```
 |── mp-project
-    ├── .babelrc
-    ├── .eslintrc.js
-    ├── .gitignore
-    ├── LICENSE
-    ├── README.md
-    ├── dist.crx
-    ├── dist.pem
-    ├── package-lock.json
-    ├── package.json
-    ├── webpack.config.js
+    ├── .babelrc （babel配置）
+    ├── .eslintrc.js （eslint配置）
+    ├── .gitignore （git）
+    ├── LICENSE （开源协议）
+    ├── README.md （说明）
+    ├── package.json （使用npm管理依赖）
+    ├── webpack.config.js （webpack配置，负责打包等...）
     └── src
         |── index.js
         ├── conf
-        |   └── manifest.json
-        ├── images
+        |   └── manifest.json (插件配置文件)
+        ├── images （logo图片）
         |   ├── icon-orgin.png
         |   └── icon.png
         ├── js
-        |   ├── background.js
-        |   ├── http.js
-        |   ├── img2md5.js
-        |   ├── init.js
-        |   └── process.js
+        |   ├── background.js （负责跨域请求）
+        |   ├── http.js （对flyjs的封装）
+        |   ├── img2md5.js (图片转md5工具)
+        |   ├── init.js （初始化获取配置）
+        |   └── process.js （获取答案）
         └── pages
-            └── background.html
+            └── background.html （常驻后台页面和background.js）
 ```
 
-
+# 联系我们
+微信公众号
+![Image text](https://www.baidu.com/img/bd_logo1.png?where=super)
