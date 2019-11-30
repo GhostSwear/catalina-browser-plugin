@@ -1,5 +1,5 @@
 import SparkMD5 from "spark-md5";
-
+import Http from "./http";
 /**
  * 把img转成md5 
  * @param {图片地址，可以是数组} imgUrls 
@@ -30,32 +30,17 @@ const img2md5 = function (imgUrls) {
  */
 function doConvert(img) {
     return new Promise((resolve, reject) => {
-        let xhr = new XMLHttpRequest();
-        xhr.open("GET", img, true);
-        xhr.responseType = "blob";
-
-        xhr.onload = function () {
-            if (this.status === 200) {
-                var blob = this.response;
-                var reader = new FileReader();
-                reader.onload = function (e) {
-                    var spark = new SparkMD5.ArrayBuffer();
-                    spark.append(e.target.result);
-                    resolve(spark.end());
-                };
-                //转换成FileReader对象
-                reader.readAsArrayBuffer(blob);
-            } else {
-                reject("转换失败，图片响应码并非200，而是：" + this.status);
-            }
-        };
-
-        // 请求出错
-        xhr.onerror = reject;
-        // 请求超时
-        xhr.ontimeout = reject;
-
-        xhr.send();
+        Http.get(img,null,"blob").then(d=>{
+            var blob = this.response;
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                var spark = new SparkMD5.ArrayBuffer();
+                spark.append(e.target.result);
+                resolve(spark.end());
+            };
+            //转换成FileReader对象
+            reader.readAsArrayBuffer(blob);
+        }).catch(reject);
 
     });
 }
