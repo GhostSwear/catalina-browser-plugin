@@ -4,7 +4,7 @@ var config = null;
 
 /**
  * 监听content_scripts.js发来的消息，因为content_scripts的权限不能进行跨域
- * 所以要协助background.js的协助
+ * 所以要background.js的协助
  */
 chrome.runtime.onConnect.addListener(function(port) {
     // 对图片转md5进行监听

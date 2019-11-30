@@ -1,20 +1,20 @@
 {
     "manifest_version": 2,
     "name": "卡特琳娜",
-    "version": "1.1.0",
-    "description": "这是一个支持自动同步和手动同步Chrome书签的插件。",
+    "version": "1.1.1",
+    "description": "卡特琳娜答题插件端，答案自动填充释放双手~",
     "icons": {
         "16": "./images/icon.png",
         "48": "./images/icon.png",
         "128": "./images/icon.png"
     },
     "browser_action": {
-        "name": "Click to change the icon's color"
+        "name": "卡特琳娜"
     },
     "background": {
         "page": "./pages/background.html"
     },
-    "homepage_url": "https://gitee.com/starxg/catalina-browser-plugin#readme",
+    "homepage_url": "https://github.com/YQHP-Happi/catalina-browser-plugin#readme",
     "permissions": [
         "webRequest",
         "webRequestBlocking"
@@ -25,7 +25,9 @@
                 "http://*/testing/exam/createSkillPaper",
                 "http://*/testing/exam/paper",
                 "https://*/testing/exam/createSkillPaper",
-                "https://*/testing/exam/paper"
+                "https://*/testing/exam/paper",
+                "http://*/testing/unified/exam",
+                "https://*/testing/unified/exam"
             ],
             "js": [
                 "js/index.js"

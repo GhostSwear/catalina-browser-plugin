@@ -11,9 +11,9 @@
   "author": "卡特琳娜",
   "license": "GPL3.0",
   "bugs": {
-    "url": "https://gitee.com/starxg/catalina-browser-plugin/issues"
+    "url": "https://github.com/YQHP-Happi/catalina-browser-plugin/issues"
   },
-  "homepage": "https://gitee.com/starxg/catalina-browser-plugin#readme",
+  "homepage": "https://github.com/YQHP-Happi/catalina-browser-plugin#readme",
   "devDependencies": {
     "@babel/core": "^7.7.4",
     "@babel/plugin-proposal-class-properties": "^7.7.4",

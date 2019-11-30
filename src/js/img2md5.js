@@ -34,7 +34,7 @@ const img2md5 = function(imgUrls) {
 
 /**
  * 转换
- * @param {图片地址}} img
+ * @param {图片地址} img
  */
 function doConvert(img) {
     return new Promise((resolve, reject) => {

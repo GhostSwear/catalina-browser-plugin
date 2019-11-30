@@ -31,12 +31,14 @@ async function inject(config) {
     console.log("开始获取图片的md5...");
     const md5s = await img2md5(imgUrls);
     console.log("获取图片的md5成功...", md5s);
+
+    console.log("开始通过md5获取答案...", md5s);
     const answers = await getAnswers(md5s);
     if (answers.length === 0) {
         console.log("通过md5获取答案失败");
         return;
     }
-    console.log("通过md5获取答案轼成功...", answers);
+    console.log("通过md5获取答案成功...", answers);
 
     console.log("开始获取选项...");
     let choices = document.querySelectorAll("div.sec.post ul.sec2.grays");
