@@ -12,7 +12,7 @@
 1. 下载最新版的插件 [点我下载](https://github.com/YQHP-Happi/catalina-browser-plugin/releases)
     > 进去之后找最上面的：catalina-browser-plugin-release-vxx.zip，下载后解压
 2. 解压完成之后打开 Chromium内核浏览器
-    > 推荐使用 [Chrome](https://www.google.cn/intl/zh-CN/chrome/) 、[新版Edge](https://www.microsoftedgeinsider.com/zh-cn/download/) 浏览器。当然360、QQ、百度、搜狗等浏览器也可以（但不保证可用性）。
+    > 推荐使用 [Chrome](https://www.google.cn/intl/zh-CN/chrome/) 、[新版Edge](https://www.microsoftedgeinsider.com/zh-cn/download/) 浏览器。当然用360、QQ、百度、搜狗等浏览器也可以（但不保证可用性）。
 3. 打开浏览器之后（以新版Edge为例）
     > * 点击右上角的三个点  
     > 
@@ -27,7 +27,7 @@
 2. 答题
     > 随便进入一个答题模式：专项技能型、课程复习型、模拟真题型进入之后等3-5秒题目会自动选中。  
     > 
-    > 如果答案未自动选中请看下面：开发者模式）
+    > 如果答案未自动选中请看下面：开发者模式
 3. 开发者模式
     > 打开试卷时候我们推荐你打开“开发者模式”（按键盘F12）然后点击“Console”即可看到对应日志。
 
@@ -45,36 +45,36 @@
 
 #### 结构
 ```
-|── mp-project
-    ├── .babelrc （babel配置）
-    ├── .eslintrc.js （eslint配置）
-    ├── .gitignore （git）
-    ├── LICENSE （开源协议）
-    ├── README.md （说明）
-    ├── package.json （使用npm管理依赖）
-    ├── webpack.config.js （webpack配置，负责打包等...）
+|── catalina-browser-plugin
+    ├── .babelrc
+    ├── .eslintrc.js
+    ├── .gitignore
+    ├── LICENSE
+    ├── README.md
+    ├── package.json
+    ├── webpack.config.js
     └── src
         |── index.js
         ├── conf
-        |   └── manifest.json (插件配置文件)
-        ├── images （logo图片）
+        |   └── manifest.json
+        ├── images
         |   ├── icon-orgin.png
         |   └── icon.png
         ├── js
-        |   ├── background.js （负责跨域请求）
-        |   ├── http.js （对flyjs的封装）
-        |   ├── img2md5.js (图片转md5工具)
-        |   ├── init.js （初始化获取配置）
-        |   └── process.js （获取答案）
+        |   ├── background.js
+        |   ├── http.js
+        |   ├── img2md5.js
+        |   ├── init.js
+        |   └── process.js
         └── pages
-            └── background.html （常驻后台页面和background.js）
+            └── background.html
 ```
 
 ## 关于我们
 
 #### 联系
 QQ群：[532077356](https://qm.qq.com/cgi-bin/qm/qr?k=kpuO3MBZH5QB-nEA0RRe8y7OQTWNqsgi&authKey=YU0ymghKS0ZziCJJsq5omi3uj%2FgyV2o3hirsBkTRVwG3d0ay%2Fp9wqdqIAHJMCHAo)  
-微信公众号：catalina  
+微信公众号：卡特琳娜
 
 #### 意见/建议
 如在使用中遇到问题，[点我反馈](https://github.com/YQHP-Happi/catalina-browser-plugin/issues/new)
