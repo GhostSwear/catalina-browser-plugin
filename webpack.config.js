@@ -8,11 +8,10 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 // 编译参数
 const argv = require("yargs").argv;
-const DEV_MODE = "development";
 
 module.exports = {
     mode: argv.mode || "development",
-    devtool: argv.mode === DEV_MODE ? "cheap-module-eval-source-map" : "none",
+    devtool: "none",
     entry: {
         index: path.resolve(__dirname, "./src/index.js"),
         background: path.resolve(__dirname, "./src/js/background.js")
@@ -47,7 +46,6 @@ module.exports = {
         ]
     },
     plugins: [
-        // options 页面
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, "./src/pages/background.html"),
             minify: {
@@ -62,14 +60,17 @@ module.exports = {
         // 清理dist文件夹
         new CleanWebpackPlugin(),
         // 复制文件夹
-        new CopyWebpackPlugin([{
-            // 复制图片
-            from: path.resolve(__dirname, "./src/images"),
-            to: path.resolve(__dirname, "./dist/images"),
-        }, {
-            // 复制插件配置文件
-            from: path.resolve(__dirname, "./src/conf/manifest.json"),
-            to: path.resolve(__dirname, "./dist/manifest.json"),
-        }])
+        new CopyWebpackPlugin([
+            {
+                // 复制图片
+                from: path.resolve(__dirname, "./src/images"),
+                to: path.resolve(__dirname, "./dist/images")
+            },
+            {
+                // 复制插件配置文件
+                from: path.resolve(__dirname, "./src/conf/manifest.json"),
+                to: path.resolve(__dirname, "./dist/manifest.json")
+            }
+        ])
     ]
 };
