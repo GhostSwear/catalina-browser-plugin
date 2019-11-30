@@ -43,7 +43,7 @@
 * node
 * webpack
 
-不懂也可以，只要会javascript也可以看懂。
+npm、node、webpack不懂也可以，只要会javascript也可以看懂。
 
 #### 结构
 ```
