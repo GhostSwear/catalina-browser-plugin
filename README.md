@@ -77,4 +77,4 @@ QQ群：[532077356](https://qm.qq.com/cgi-bin/qm/qr?k=kpuO3MBZH5QB-nEA0RRe8y7OQT
 微信公众号：catalina  
 
 #### 意见/建议
-如在使用中遇到问题，[点我反馈](https://github.com/YQHP-Happi/catalina-browser-plugin/issues)
+如在使用中遇到问题，[点我反馈](https://github.com/YQHP-Happi/catalina-browser-plugin/issues/new)
