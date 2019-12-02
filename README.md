@@ -11,8 +11,8 @@
 #### 安装(Android)
 > [点我看图文教程](http://bbs.huluxia.com/wap/thread/612097.html?para=37Hftt%2B337bftN%2Bx37Lftt%2By3p%2Fftt%2Bx37LfsN%2B537c%3D%0A&product=tool)
 
-#### 安装(IOS)
-> 非常抱歉，暂不支持IOS。
+#### 安装(iOS)
+> 非常抱歉，暂不支持iOS。
 
 #### 安装(Windows、Mac OS) ([点我看视频教程](https://www.bilibili.com/video/av77590532))
 1. 下载最新版的插件 [点我下载](https://github.com/YQHP-Happi/catalina-browser-plugin/releases)
