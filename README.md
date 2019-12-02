@@ -8,7 +8,13 @@
 
 ## 安装&使用
 
-#### 安装([点我看视频教程](http://mykzm.com/index.php/archives/3/))
+#### 安装(Android)
+> [点我看图文教程](http://bbs.huluxia.com/wap/thread/612097.html?para=37Hftt%2B337bftN%2Bx37Lftt%2By3p%2Fftt%2Bx37LfsN%2B537c%3D%0A&product=tool)
+
+#### 安装(IOS)
+> 非常抱歉，暂不支持IOS。
+
+#### 安装(Windows、Mac OS) ([点我看视频教程](https://www.bilibili.com/video/av77590532))
 1. 下载最新版的插件 [点我下载](https://github.com/YQHP-Happi/catalina-browser-plugin/releases)
     > 进去之后找最上面的：[catalina-browser-plugin-release-v1.1.1.zip](https://github.com/YQHP-Happi/catalina-browser-plugin/releases/download/v1.1.1/catalina-browser-plugin-release-v1.1.1.zip)
 ，下载后解压
@@ -21,6 +27,7 @@
     > * 打开左下角的 “开发人员模式”    
     > * 然后点击上面的 “加载解压缩的扩展”  
     > * 选择刚刚解压的插件即可
+
 
 #### 使用
 1. 打开官方题库页面
