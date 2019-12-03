@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "卡特琳娜",
-    "version": "1.1.2",
+    "version": "1.1.1",
     "description": "卡特琳娜答题插件端，答案自动填充释放双手~",
     "icons": {
         "16": "./images/icon.png",
@@ -17,8 +17,7 @@
     "homepage_url": "https://github.com/YQHP-Happi/catalina-browser-plugin#readme",
     "permissions": [
         "webRequest",
-        "webRequestBlocking",
-        "<all_urls>"
+        "webRequestBlocking"
     ],
     "content_scripts": [
         {

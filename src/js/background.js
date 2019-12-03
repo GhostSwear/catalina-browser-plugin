@@ -5,11 +5,11 @@ import Http from "./http";
  * 监听content_scripts.js发来的消息，因为content_scripts的权限不能进行跨域
  * 所以要background.js的协助
  */
-chrome.runtime.onConnect.addListener(function (port) {
+chrome.runtime.onConnect.addListener(function(port) {
     // 对图片转md5进行监听
     if (port.name === "img2md5") {
-        port.onMessage.addListener(function ({ imgUrls, referer }) {
-            img2md5(imgUrls, referer)
+        port.onMessage.addListener(function(imgUrls) {
+            img2md5(imgUrls)
                 .then(d => {
                     port.postMessage(d);
                 })
@@ -19,7 +19,7 @@ chrome.runtime.onConnect.addListener(function (port) {
 
     //对初始化配置进行监听
     if (port.name === "initConfig") {
-        port.onMessage.addListener(function () {
+        port.onMessage.addListener(function() {
             Http.get("http://catalina.starxg.com/catalina-plugin-conf.json", {
                 r: Math.random()
             })
@@ -39,7 +39,7 @@ chrome.runtime.onConnect.addListener(function (port) {
     }
 
     if (port.name === "getAnswers") {
-        port.onMessage.addListener(function (md5s) {
+        port.onMessage.addListener(function(md5s) {
             Http.post("http://starxg.com/answer/img/md5", md5s)
                 .then(d => {
                     port.postMessage(d);
@@ -50,20 +50,3 @@ chrome.runtime.onConnect.addListener(function (port) {
         });
     }
 });
-
-/**
- * 拦截请求头,拦截资源请求.从而达到添加 Referer
- */
-chrome.webRequest.onBeforeSendHeaders.addListener(function (details) {
-    
-    for (const h of details.requestHeaders) {
-        if (h.name === "myReferer") {
-            h.name = "Referer";
-            break;
-        }
-    }
-
-    return { requestHeaders: details.requestHeaders };
-},
-{ urls: ["*://exam-resources.bdqn.cn/*", "*://tiku.ekgc.cn/*", "*://tiku.kgc.cn/*", "*://exam.bdqn.cn/*"] },
-["blocking","requestHeaders", "extraHeaders"]);

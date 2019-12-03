@@ -71,7 +71,7 @@ async function inject(config) {
  */
 function img2md5(imgUrls) {
     return new Promise((resolve, reject) => {
-        port.postMessage({ imgUrls, referer: location.href });
+        port.postMessage(imgUrls);
         port.onMessage.addListener(resolve);
     });
 }
