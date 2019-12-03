@@ -1,7 +1,7 @@
 import { getConfig } from "./js/init";
 import process from "./js/process";
-const CURR_VERSION_CODE = 111;
-const CURR_VERSION = "1.1.1";
+const CURR_VERSION_CODE = 112;
+const CURR_VERSION = "1.1.2";
 
 //require("./js/process");
 
@@ -10,7 +10,6 @@ const CURR_VERSION = "1.1.1";
  */
 async function run() {
     try {
-
         // 获取配置
         const config = await getConfig();
         // 判断是否可用
