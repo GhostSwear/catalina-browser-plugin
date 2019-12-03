@@ -12,7 +12,7 @@ async function inject(config) {
     console.log("开始获取图片...");
     let imgs = document.querySelectorAll("div.sec.post div.sec2.grays pre img");
     if (imgs.length === 0) {
-        console.log("获取的图片dom是0个无法注入答案");
+        alert("获取的图片dom是0个无法注入答案，请按F12打开控制台看详细错误");
         return;
     }
     console.log(`获取图片成功...共：${imgs.length}张`);
@@ -23,7 +23,7 @@ async function inject(config) {
         imgUrls.push(e.getAttribute("src"));
     });
     if (imgUrls.length === 0) {
-        console.log("获取图片url是0个无法注入答案");
+        alert("获取图片url是0个无法注入答案，请按F12打开控制台看详细错误");
         return;
     }
     console.log(`获取图片Url成功...共：${imgs.length}个`);
@@ -35,7 +35,7 @@ async function inject(config) {
     console.log("开始通过md5获取答案...", md5s);
     const answers = await getAnswers(md5s);
     if (answers.length === 0) {
-        console.log("通过md5获取答案失败");
+        alert("通过md5获取答案失败，请按F12打开控制台看详细错误");
         return;
     }
     console.log("通过md5获取答案成功...", answers);

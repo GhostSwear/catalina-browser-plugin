@@ -1,6 +1,16 @@
 import img2md5 from "./img2md5";
 import Http from "./http";
 
+// 获取浏览器版本
+const CHROME_VERSION = parseInt(/Chrome\/([0-9.]+)/.exec(navigator.userAgent)[1]);
+// 拦截请求头选项
+const BEFORE_SEND_HEADERS_OPTIONS = ["blocking", "requestHeaders"];
+// 兼容低版本浏览器,因为 Chromium 要求72版本以上要想修改Referer头必须加extraHeaders
+if (chrome.webRequest.OnBeforeRequestOptions.EXTRA_HEADERS || CHROME_VERSION >= 72) {
+    BEFORE_SEND_HEADERS_OPTIONS.push("extraHeaders");
+}
+console.log(`当前Chromium版本：${CHROME_VERSION}，拦截请求选项：${BEFORE_SEND_HEADERS_OPTIONS}`);
+
 /**
  * 监听content_scripts.js发来的消息，因为content_scripts的权限不能进行跨域
  * 所以要background.js的协助
@@ -51,14 +61,8 @@ chrome.runtime.onConnect.addListener(function (port) {
     }
 });
 
-// 拦截请求头选项
-const BEFORE_SEND_HEADERS_OPTIONS = ["blocking", "requestHeaders"];
-// 兼容低版本浏览器
-if (chrome.webRequest.OnBeforeRequestOptions.EXTRA_HEADERS) {
-    BEFORE_SEND_HEADERS_OPTIONS.push(chrome.webRequest.OnBeforeRequestOptions.EXTRA_HEADERS);
-}
 /**
- * 拦截请求头,拦截资源请求.从而达到添加 Referer
+ * 拦截图片资源请求.从而达到添加 Referer
  */
 chrome.webRequest.onBeforeSendHeaders.addListener(function (details) {
 

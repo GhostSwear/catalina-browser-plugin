@@ -1,5 +1,10 @@
+const manifest = require("./src/conf/manifest");
+const npmPackage = require("./package.json");
+const webpack = require("webpack");
 const path = require("path");
 
+// js 转 json
+const GenerateJsonPlugin = require("generate-json-webpack-plugin");
 // html 插件
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 // 复制文件夹
@@ -46,6 +51,13 @@ module.exports = {
         ]
     },
     plugins: [
+        /**
+         * 将js转成json
+         */
+        new GenerateJsonPlugin("./manifest.json", manifest),
+        new webpack.DefinePlugin({
+            VERSION: JSON.stringify(npmPackage.version)
+        }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, "./src/pages/background.html"),
             minify: {
@@ -65,11 +77,6 @@ module.exports = {
                 // 复制图片
                 from: path.resolve(__dirname, "./src/images"),
                 to: path.resolve(__dirname, "./dist/images")
-            },
-            {
-                // 复制插件配置文件
-                from: path.resolve(__dirname, "./src/conf/manifest.json"),
-                to: path.resolve(__dirname, "./dist/manifest.json")
             }
         ])
     ]

@@ -1,8 +1,13 @@
-{
+const npmPackage = require("./../../package.json");
+
+/**
+ * 最终会输出 manifest.json
+ */
+const config = {
     "manifest_version": 2,
     "name": "卡特琳娜",
-    "version": "1.1.3",
-    "description": "卡特琳娜答题插件端，答案自动填充释放双手~",
+    "version": npmPackage.version,
+    "description": npmPackage.description,
     "icons": {
         "16": "./images/icon.png",
         "48": "./images/icon.png",
@@ -35,4 +40,6 @@
             ]
         }
     ]
-}
+};
+
+module.exports = config;
