@@ -51,11 +51,17 @@ chrome.runtime.onConnect.addListener(function (port) {
     }
 });
 
+// 拦截请求头选项
+const BEFORE_SEND_HEADERS_OPTIONS = ["blocking", "requestHeaders"];
+// 兼容低版本浏览器
+if (chrome.webRequest.OnBeforeRequestOptions.EXTRA_HEADERS) {
+    BEFORE_SEND_HEADERS_OPTIONS.push(chrome.webRequest.OnBeforeRequestOptions.EXTRA_HEADERS);
+}
 /**
  * 拦截请求头,拦截资源请求.从而达到添加 Referer
  */
 chrome.webRequest.onBeforeSendHeaders.addListener(function (details) {
-    
+
     for (const h of details.requestHeaders) {
         if (h.name === "myReferer") {
             h.name = "Referer";
@@ -66,4 +72,4 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function (details) {
     return { requestHeaders: details.requestHeaders };
 },
 { urls: ["*://exam-resources.bdqn.cn/*", "*://tiku.ekgc.cn/*", "*://tiku.kgc.cn/*", "*://exam.bdqn.cn/*"] },
-["blocking","requestHeaders", "extraHeaders"]);
+BEFORE_SEND_HEADERS_OPTIONS);

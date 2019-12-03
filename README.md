@@ -16,8 +16,7 @@
 
 #### 安装(Windows、Mac OS) ([点我看视频教程](https://www.bilibili.com/video/av77590532))
 1. 下载最新版的插件 [点我下载](https://github.com/YQHP-Happi/catalina-browser-plugin/releases)
-    > 进去之后找最上面的：[catalina-browser-plugin-release-v1.1.2.zip](https://github.com/YQHP-Happi/catalina-browser-plugin/releases/download/v1.1.2/catalina-browser-plugin-release-v1.1.2.zip)
-，下载后解压
+    > 进去之后找最上面的（最新版本），下载后解压
 2. 解压完成之后打开 Chromium内核浏览器
     > 推荐使用 [Chrome](https://www.google.cn/intl/zh-CN/chrome/) 、[新版Edge](https://www.microsoftedgeinsider.com/zh-cn/download/) 浏览器。当然用360、QQ、百度、搜狗等浏览器也可以（但不保证可用性）。
 3. 打开浏览器之后（以新版Edge为例）

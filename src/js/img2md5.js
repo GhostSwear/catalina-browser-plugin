@@ -8,7 +8,7 @@ const img2md5 = function (imgUrls, referer) {
     // 如果是单个的时候转成数组
     imgUrls = typeof imgUrls === "string" ? [imgUrls] : imgUrls;
 
-    // 采用数组，因为异步无须，利用数组保证有序！
+    // 采用数组，因为异步无序，利用数组保证有序！
     let result = [];
     for (let i = 0; i < imgUrls.length; i++) {
         result.push(i);

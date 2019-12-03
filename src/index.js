@@ -1,8 +1,7 @@
 import { getConfig } from "./js/init";
 import process from "./js/process";
-const CURR_VERSION_CODE = 112;
-const CURR_VERSION = "1.1.2";
-
+const CURR_VERSION_CODE = 113;
+const CURR_VERSION = "1.1.3";
 //require("./js/process");
 
 /**
@@ -22,7 +21,7 @@ async function run() {
         //判断是否最新版本
         if (config.maxVersionCode > CURR_VERSION_CODE) {
             console.log(`当前版本:${CURR_VERSION},最新版本:${config.maxVersion}`);
-            writeNote(`<a target="_blank" style="color:blue;text-decoration: underline;" href="https://github.com/YQHP-Happi/catalina-browser-plugin#readme">卡特琳娜 当前版本:${CURR_VERSION},最新版本:${config.maxVersion}</a>`);
+            writeNote(`<a target="_blank" style="color:blue;text-decoration: underline;" href="https://github.com/YQHP-Happi/catalina-browser-plugin#%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8">卡特琳娜 当前版本:${CURR_VERSION},最新版本:${config.maxVersion}</a>`);
             return;
         }
 
