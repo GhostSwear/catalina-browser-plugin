@@ -90,20 +90,20 @@ QQ群：[532077356](https://qm.qq.com/cgi-bin/qm/qr?k=kpuO3MBZH5QB-nEA0RRe8y7OQT
 
 ## 更新历史
 
-#### v1.1.4  (2019年12月4日)
+#### [v1.1.4](https://github.com/YQHP-Happi/catalina-browser-plugin/releases/tag/v1.1.4)  (2019年12月4日)
 1. 修复部分Chrome浏览器无法使用的问题
 
-#### v1.1.3  (2019年12月3日)
+#### [v1.1.3](https://github.com/YQHP-Happi/catalina-browser-plugin/releases/tag/v1.1.3)  (2019年12月3日)
 1. 修复安卓用户无法使用的问题
 
-#### v1.1.2  (2019年12月3日)
+#### [v1.1.2](https://github.com/YQHP-Happi/catalina-browser-plugin/releases/tag/v1.1.2)  (2019年12月3日)
 1. 修复官方检测referer头导致无效的问题
 
-#### v1.1.1 (2019年12月2日)
+#### [v1.1.1](https://github.com/YQHP-Happi/catalina-browser-plugin/releases/tag/v1.1.1) (2019年12月2日)
 1. 修复统一测试无法使用的问题
 2. 修改部分注释错误的问题
 
-#### v1.1.0 (2019年12月1日)
+#### [v1.1.0](https://github.com/YQHP-Happi/catalina-browser-plugin/releases/tag/v1.1.0) (2019年12月1日)
 1. 插件版发布
 
 
